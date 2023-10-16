@@ -20,7 +20,10 @@ console.log(`Дата: ${year}:${mounth + 1}:${day} - время: ${hours}:${min
 const timestamp = () => console.log(new Date());
 timestamp();
 
-const timestampForTask = () => console.log(`Дата: ${year}:${mounth + 1}:${day} - время: ${hours}:${minutes}`);
+const timestampForTask = () => {
+    let timestamp = `Дата: ${year}:${mounth + 1}:${day} - время: ${hours}:${minutes}`;
+    console.log(timestamp);
+}
 timestampForTask();
 
 let sumBlock = (a, b) => { 
