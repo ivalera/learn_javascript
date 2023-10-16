@@ -3,13 +3,13 @@ const STATUS_IN_PROGRESS = "In Progress";
 const STATUS_DONE = "Done";
 const STATUS_CHANGE_ERROR = "Such a task does not exist!";
 
-const addTask = (post) => toDo.list[post] = STATUS_TO_DO;
-const deleteTask = (post) => delete toDo.list[post];
-const changeStatus = (post, status) => {
-    if(post in toDo.list){
-        toDo.list[post] = status;
+const addTask = (task) => toDo.list[task] = STATUS_TO_DO;
+const deleteTask = (task) => delete toDo.list[task];
+const changeStatus = (task, status) => {
+    if(task in toDo.list){
+        toDo.list[task] = status;
     }else{
-        console.log(`${post} - ${STATUS_CHANGE_ERROR}`)
+        console.log(`${task} - ${STATUS_CHANGE_ERROR}`)
     }
 }
 
@@ -27,9 +27,9 @@ const toDo = {
         let countDone = 0;
 
         console.log("To do:");
-        for (const post in toDo.list){
-            if(this.list[post] === STATUS_TO_DO){
-                console.log(`   "${post}"`);
+        for (const task in toDo.list){
+            if(this.list[task] === STATUS_TO_DO){
+                console.log(`   "${task}"`);
                 countToDo++;
             } 
         }
@@ -37,9 +37,9 @@ const toDo = {
             console.log(`   -`);
         }
         console.log("In Progress:")
-        for (const post in toDo.list){
-            if(this.list[post] === STATUS_IN_PROGRESS){
-                console.log(`   "${post}"`);
+        for (const task in toDo.list){
+            if(this.list[task] === STATUS_IN_PROGRESS){
+                console.log(`   "${task}"`);
                 countInProgress++;
             }
         }
@@ -47,9 +47,9 @@ const toDo = {
             console.log(`   -`);
         }
         console.log("Done:")
-        for (const post in toDo.list){
-            if(this.list[post] === STATUS_DONE){
-                console.log(`   "${post}"`);
+        for (const task in toDo.list){
+            if(this.list[task] === STATUS_DONE){
+                console.log(`   "${task}"`);
                 countDone++;
             }
         }
