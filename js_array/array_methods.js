@@ -156,4 +156,4 @@ for(let word of wordsFromText){
         amount++;
     }
 }
-console.log(`Искомый текст \'массив\' встречается ${amount} раз.`)
+console.log(`Искомый текст \'массив\' встречается ${amount} раз.`);
